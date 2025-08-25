@@ -1,47 +1,51 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   padding: 0;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  color: #fff;
   line-height: 1.6;
-  background: #f9f9f9;
-  color: #333;
 }
 
 header {
-  background: #0077cc;
-  color: #fff;
-  padding: 2rem;
   text-align: center;
+  padding: 3rem 1rem;
 }
 
 header h1 {
-  margin: 0;
-  font-size: 2.5rem;
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  animation: fadeIn 2s ease-in-out;
+}
+
+header p {
+  font-size: 1.2rem;
+  opacity: 0.9;
 }
 
 section {
+  max-width: 900px;
+  margin: 2rem auto;
   padding: 2rem;
-  max-width: 800px;
-  margin: auto;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  transition: transform 0.3s;
+}
+
+section:hover {
+  transform: scale(1.02);
 }
 
 h2 {
-  color: #0077cc;
+  color: #ffd700;
   margin-bottom: 1rem;
 }
 
-ul {
-  list-style: none;
-  padding: 0;
-}
-
-ul li {
-  margin: 0.5rem 0;
-}
-
 a {
-  color: #0077cc;
+  color: #ffd700;
   text-decoration: none;
+  font-weight: bold;
 }
 
 a:hover {
@@ -49,9 +53,15 @@ a:hover {
 }
 
 footer {
-  background: #333;
-  color: #fff;
   text-align: center;
   padding: 1rem;
-  margin-top: 2rem;
+  background: rgba(0,0,0,0.5);
+  margin-top: 3rem;
+  font-size: 0.9rem;
+}
+
+/* Animasyon */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
